@@ -12,7 +12,6 @@ use Illuminate\Support\Facades\Validator;
 
 class UserCtrl extends Controller
 {
-
     public function register(Request $request)
     {
         // Validate the form data
@@ -25,8 +24,8 @@ class UserCtrl extends Controller
         // Check if validation fails
         if ($validator->fails()) {
             return redirect()->route('register')
-                             ->withErrors($validator)
-                             ->withInput();
+                ->withErrors($validator)
+                ->withInput();
         }
 
         // Create a new user

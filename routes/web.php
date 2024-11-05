@@ -31,8 +31,6 @@ Route::get('register', [UserCtrl::class, 'showRegisterForm'])
     ->middleware(['guest'])
     ->name('show-register');
 
-
-
 Route::get('login', [UserCtrl::class, 'login'])
     ->middleware(['guest'])
     ->name('login');
