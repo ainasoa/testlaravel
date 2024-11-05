@@ -23,6 +23,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::post('register', [UserCtrl::class, 'register'])
+    ->middleware(['guest'])
+    ->name('register');
+
+Route::get('register', [UserCtrl::class, 'showRegisterForm'])
+    ->middleware(['guest'])
+    ->name('show-register');
+
+
+
 Route::get('login', [UserCtrl::class, 'login'])
     ->middleware(['guest'])
     ->name('login');
